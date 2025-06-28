@@ -1,0 +1,78 @@
+{
+	"name": "realtime-data-cli-tool",
+	"version": "1.0.1",
+	"description": "A real-time data dashboard CLI tool built with Ink, React, and TypeScript that displays live ISS location, weather, Bitcoin prices, random facts, and inspirational quotes",
+	"license": "MIT",
+	"author": "Sakun Panthi",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sakunpanthi123/realtime-data-cli-tool.git"
+	},
+	"keywords": [
+		"cli",
+		"dashboard",
+		"real-time",
+		"iss",
+		"weather",
+		"bitcoin",
+		"quotes",
+		"facts",
+		"ink",
+		"react",
+		"typescript"
+	],
+	"bin": "dist/cli.js",
+	"type": "module",
+	"engines": {
+		"node": ">=16"
+	},
+	"scripts": {
+		"build": "tsc",
+		"start": "node dist/cli.js",
+		"dev": "npm run build && node dist/cli.js --name=\"Dev Mode\"",
+		"watch": "./watch.sh",
+		"test": "prettier --check . && xo && ava",
+		"prepublishOnly": "npm run build",
+		"clean": "rm -rf dist"
+	},
+	"files": [
+		"dist"
+	],
+	"dependencies": {
+		"ink": "^4.1.0",
+		"meow": "^11.0.0",
+		"react": "^18.2.0"
+	},
+	"devDependencies": {
+		"@sindresorhus/tsconfig": "^3.0.1",
+		"@types/react": "^18.0.32",
+		"@vdemedes/prettier-config": "^2.0.1",
+		"ava": "^5.2.0",
+		"chalk": "^5.2.0",
+		"eslint-config-xo-react": "^0.27.0",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"ink-testing-library": "^3.0.0",
+		"prettier": "^2.8.7",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.0.3",
+		"xo": "^0.53.1"
+	},
+	"ava": {
+		"extensions": {
+			"ts": "module",
+			"tsx": "module"
+		},
+		"nodeArguments": [
+			"--loader=ts-node/esm"
+		]
+	},
+	"xo": {
+		"extends": "xo-react",
+		"prettier": true,
+		"rules": {
+			"react/prop-types": "off"
+		}
+	},
+	"prettier": "@vdemedes/prettier-config"
+}
