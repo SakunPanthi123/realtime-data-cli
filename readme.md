@@ -1,4 +1,5 @@
 # Real-Time Data CLI Dashboard
+<img width="1438" alt="image" src="https://github.com/user-attachments/assets/285bdbc9-be37-4c85-8b2c-ba65c0710e54" />
 
 > A beautiful terminal dashboard that displays real-time data from around the world, built with Ink, React, and TypeScript.
 
